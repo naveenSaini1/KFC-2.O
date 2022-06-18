@@ -30,8 +30,8 @@
                     </div>
                     <div id="Border_left"></div>
                     <div class="cart-bucket">
-                        <span>$</span>
-                        <span>0</span>
+                        <span></span>
+                        <span id="pricess">0</span>
                         <div class="img"><a href="/addCart.html"><img
                                     src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"
                                     alt="">
@@ -191,4 +191,18 @@
 </body>
 
 </html>
+<script>
+    let valueofPrice=0;
+let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+function totalPrice(){
+    
+    console.log('hello')
+    allPrice.forEach(e=>{
+        console.log(e.Price)
+        valueofPrice+=Number(e.Price);
+    })
+    document.getElementById('pricess').innerText=allPrice.length;
+}
+totalPrice()
+</script>
 <script src="js/account.js"></script>

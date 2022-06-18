@@ -155,6 +155,7 @@ ChickenBucket(itemsArr)
             add.setAttribute("class","AddButton")
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -301,6 +302,7 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -420,6 +422,7 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -556,6 +559,7 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -656,6 +660,7 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -783,6 +788,7 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -900,6 +906,7 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -1171,6 +1178,7 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -1257,11 +1265,13 @@ ChickenBucket(itemsArr)
             addImage.setAttribute("src", elem.Add)
             let add = document.createElement("button");
             add.innerText = "Add to Cart";
+            
             add.append(addImage)
             add.setAttribute("class","AddButton2")
 
 
             add.addEventListener("click", function(){
+                totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
@@ -1295,3 +1305,15 @@ ChickenBucket(itemsArr)
             return false;
         }
     }
+let valueofPrice=0;
+let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+function totalPrice(){
+    
+    console.log('hello')
+    allPrice.forEach(e=>{
+        console.log(e.Price)
+        valueofPrice+=Number(e.Price);
+    })
+    document.getElementById('pricess').innerText=allPrice.length;
+}
+totalPrice()

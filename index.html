@@ -29,8 +29,8 @@
                     </div>
                     <div id="Border_left"></div>
                     <div class="cart-bucket">
-                        <span>$</span>
-                        <span>0</span>
+                        <span></span>
+                        <span id="pricess">0</span>
                         <div class="img"><a href="/addCart.html"><img
                                     src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"
                                     alt="">
@@ -128,7 +128,7 @@
                         <div class="img">
                             <img src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt="">
                         </div>
-                        <a href="/">
+                        <a href="/Menu.html">
                             <h3>View All Menu <span><img
                                         src="https://online.kfc.co.in/static/media/black_right_arrow.a801582c.svg"
                                         alt="" class="more-arrow-img"></span></h3>
@@ -159,7 +159,7 @@
         <div class="offerDealsContainer">
             <div class="offersAll">
                 <h2>Offers & Deals</h2>
-                <a href="/">
+                <a href="/Menu.html">
                     <h3>View All Menu <span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="7"
                                 viewBox="0 0 19 7" fill="none" class="injected-svg"
                                 data-src="/static/media/ViewDetailsArrow.53c29b5a.svg"
@@ -317,4 +317,18 @@
 </body>
 
 </html>
+<script>
+    let valueofPrice=0;
+let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+function totalPrice(){
+    
+    console.log('hello')
+    allPrice.forEach(e=>{
+        console.log(e.Price)
+        valueofPrice+=Number(e.Price);
+    })
+    document.getElementById('pricess').innerText=allPrice.length;
+}
+totalPrice()
+</script>
 <script src="js/index.js"></script>

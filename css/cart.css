@@ -187,6 +187,7 @@
     border-radius: 33px;
     background: rgb(228,0,43);
     width: 70%;
+    cursor: pointer;
     margin: auto;
 }
 .checkout span{
