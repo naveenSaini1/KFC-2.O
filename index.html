@@ -4,222 +4,277 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KFC BOTTOM PAGE</title>
-    <style>
-         body *{
-            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        #box{
-            background-color:#202124;
-            color: white;
-            padding: 1%;
-            display: grid;
-        }
-        #box1{
-            display: grid;
-            grid-template: repeat(1,auto)/repeat(8,auto);
-            justify-content: space-around;
-            
-        }
-        #logo{
-            display: flex;
-        }
-        #logo>img{
-            width: 10%;
-            height: 22%;
-            margin-right: 10%;
-        }
-        #logo1{
-            margin-top: 12%;
-            cursor: pointer;
-        }
-        #logo2{
-            margin-top: 12%;
-            cursor: pointer;
-        }
-        #box>div:nth-child(9){
-            margin-left: 80%;
-        }
-        #copyright{
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 5%;
-        }
-        #copyright>div:last-child{
-            margin-right: -30%;
-        }
-        #copyright>div:first-child{
-            font-size: 12px;
-            color: grey;
-        }
-        #kfclogo{
-            cursor: pointer;
-        }
-        h4{
-            cursor: pointer;
-        }
-        h4:hover{
-            color: rgb(242, 232, 232);
-        }
-        #logo{
-            cursor: pointer;
-        }
-        .logo1{
-            cursor: pointer;
-        }
-        #copyright>div>img{
-            cursor: pointer;
-        }
-        .popup1{
-            position: absolute;
-            transform: translate(-50%,-50%);
-            top: -150%;
-            left: 50%;
-            opacity:0;
-            transform: translate(-50%, -50%) scale(1.25);
-            width: 40%;
-            height: auto;
-            padding: 20px 30px;
-            background: #fff;
-            box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
-            border-radius: 10px;
-            transition: top 0ms ease-in-out 200ms,
-                        opacity 200ms ease-in-out 0ms,
-                        transform 200ms ease-in-out 0ms;
-        
-        }
-        .popup1.active{
-            top: 50%;
-            opacity:1;
-            transform: translate(-50%, -50%) scale(1);
-            transition:top 0ms ease-in-out 200ms,
-                     opacity 200ms ease-in-out 0ms,
-                        transform 200ms ease-in-out 0ms;
-        
-        }
-        .close_button{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 20px;
-            height: 20px;
-            background:grey;
-            color: white;
-            text-align: center;
-            line-height: 15px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-        p{
-            text-align: end;
-        }
-        .form{
-            width: auto;
-            display: grid;
-            gap: 10px;
-            padding: 5%;
-            background: #f8f7f5;
-        }
-        .form>input{
-            border: none;
-            padding: 2%;
-            background:#f8f7f5;
-            border-bottom: 1px solid;
-        }
-        #button{
-            display: flex;
-            justify-content: center;
-            column-gap: 60px;
-            margin-top: 10%;  
-        }
-        #button>button{
-            border-radius: 200px;
-            background-color: white;
-            padding: 11px 40px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        #button>button:hover{
-            background-color: black;
-            color: white;
-        }
-    </style>
+    <title>KFC</title>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <div id="box">
-        <div id="box1">
-            <div>
-                        <img id="kfclogo" src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="Home">
+    <header>
+        <nav>
+            <div class="nav">
+                <div class="right-nav">
+                    <a href="/"><img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="logo"></a>
+                    <ul>
+                        <li>Menu</li>
+                        <li>Deals</li>
+                    </ul>
+                </div>
+                <div class="left-nav">
+                    <div class="user-logo">
+                        <a href="/"><img src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg" alt=""></a>
+                        <span>sign In</span>
+                    </div>
+                    |
+                    <div class="cart-bucket">
+                        
+                        <span>$</span>
+                        <span>0</span>
+                        <div class="img"><a href="/"><img src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg" alt="">
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- start Order part -->
+        <div class="startOrder">
+            <div class="childOrder">
+                    <h3>LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</h3>
+                    <button>Start Over</button>
+            </div>
         </div>
-            <div>
-                <h3>KFC Food</h3>
-                <h4 id="menu">Menu</h4>
-                <h4 id="orderlook">Order Look</h4>
-                <h4 id="giftcard">Gift Card</h4>
+
+        <div class="welcomeTokfc">
+            <div class="welocmToChild">
+                <div class="welcomeBanner">
+
+                </div>
+                <div class="welcomeMessage">
+                    <h1>WELCOME TO KFC</h1>
+                </div>
             </div>
-            <div>
-                <h3>Support</h3>
-                <h4 id="gethelp">Get Help</h4>
-                <h4 id="contactus">Contact Us</h4>
-                <h4>KFC Feedback</h4>
-                <h4 id="privacypolicy">Privacy Policy</h4>
-            </div>
-            <div>
-                <h3>Legal</h3>
-                <h4 id="terms">Terms and conditions</h4>
-                <h4 id="privacy">Privacy Policy</h4>
-                <h4 id="disclaimer">Disclaimer</h4>
-                <h4 id="caution">Caution Notice</h4>
-            </div>
-            <div>
-                <h3>KFC India</h3>
-                <h4 id="about">About KFC</h4>
-                <h4 id="care">KFC Care</h4>
-                <h4 id="careers">Careers</h4>
-                <h4 id="goldenpast">Our Golden Past</h4>
-            </div>
-            
-            <div id="logo">
-                <img src="https://images.ctfassets.net/wtodlh47qxpt/6qgKpWUOIsrIiazhk3cdmF/d60b4c20be69bab1f939bf33348b67e9/Find_KFC.svg" alt="Location">
-                <p>Find a KFC</p>
-            </div>
-            <div id="logo1">
-                <img src="https://images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg" alt="Google Play">
-            </div>
-            <div id="logo2">
-                <img src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg" alt="Apple Store">
-            </div> 
-            
-    </div>
-    <div id="copyright">
-        <div>
-            <p>Copyright © KFC Corportaion 2021 All Rights Reserved</p>
         </div>
-        <div>
-            <img id="insta" src="https://images.ctfassets.net/wtodlh47qxpt/4ZHyPA2EeaoP3aqtNDriBA/463462a9c27b0aa585e12b21ce3766e0/Social_Insta_White.svg" alt="Instagram">
-            <img id="facebook" src="https://images.ctfassets.net/wtodlh47qxpt/dKiu2meLcfz2DNwsg7nZw/7194830b1ba6f25b158a23d6b2c4752c/Social_Facebook_White.svg" alt="Facebook">
-            <img id="twitter" src="https://images.ctfassets.net/wtodlh47qxpt/78z9x0WwdkdXwGVK726EKX/6599ca34ec88e2a6f46d7d94ed85a8ad/Social_Twitter_White.svg" alt="Twitter">
+
+      
+    </header>
+      <!-- Brows CATEGORIES -->
+      <main>
+        <section>
+            <div class="catSection">
+                <div class="upper">
+                    <h3>BROWSE CATEGORIES</h3>
+                    <div class="upppLine">   
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- cards -->
+                    <div>
+                          <div class="img">
+                             <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT86.jpg?ver=16.55" alt="">
+                          </div>
+                            <h3>Chicken Buckets</h3>
+                    </div>
+                    <div>
+                        <div class="img">
+                           <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT200.jpg?ver=16.55" alt="">
+                        </div>
+                          <h3>New Launch</h3>
+                  </div>
+                  <div>
+                    <div class="img">
+                       <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT170.jpg?ver=16.55" alt="">
+                    </div>
+                      <h3>Chickens Rolls</h3>
+                  </div>
+
+                  <div>
+                    <div class="img">
+                       <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT190.jpg?ver=16.55" alt="">
+                    </div>
+                      <h3>BIRYANI BUCKETS</h3>
+                  </div>
+
+                  <div>
+                    <div class="img">
+                       <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT158.jpg?ver=16.55" alt="">
+                    </div>
+                      <h3>Box Meals</h3>
+                  </div>
+                  
+                  <div>
+                    <div class="img">
+                       <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT99.jpg?ver=16.55" alt="">
+                    </div>
+                      <h3>BURGERS</h3>
+                  </div>
+                  
+                  <div>
+                    <div class="img">
+                       <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/categories/CAT178.jpg?ver=16.55" alt="">
+                    </div>
+                      <h3>STAY home special</h3>
+                  </div> 
+                  <div class="viewAll">
+                    <div class="img">
+                       <img src="https://online.kfc.co.in/static/media/finger_lickin.fc21c805.svg" alt="">
+                    </div>
+                    <a href="/">
+                      <h3>View All Menu <span><img src="https://online.kfc.co.in/static/media/black_right_arrow.a801582c.svg" alt="" class="more-arrow-img"></span></h3>
+                    </a>
+                  </div> 
+                  
+                  
+
+                </div>
+            </div>
+        </section>
+      </main>
+
+    <footer>
+        <div class="footer">
+            <div class="bannerOfFooter">
+                <div class="bannerOfFooterChild">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="42" viewBox="0 0 80 42" fill="none" class="injected-svg" data-src="/static/media/Stripes_Small_OffersIcon.87fc6256.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="16.4103" height="41.0256" fill="#E4002B"></rect>
+                        <rect x="32.8203" width="16.4103" height="41.0256" fill="#E4002B"></rect>
+                        <rect x="63.5898" width="16.4103" height="41.0256" fill="#E4002B"></rect>
+                        </svg>
+                </div>
+            </div>    
         </div>
-    </div>
-    
-</div>
-<div class="popup1">
-    <h1>ORDER LOOKUP</h1>
-    <div class="close_button">&times;</div>
-    <hr>
-    <div class="form">
-        <h2>ENTER YOUR ORDER NUMBER</h2>
-        <p>Note: *Indicates required field</p>
-        <input type="number" name="" id="" placeholder="Phone Number*">
-        <input type="text" name="" id="" placeholder="Order Number*">
-        <input type="text" placeholder="Email Address*">
-        
-    </div>
-    <div id="button">
-    <button id="cancel">Cancel</button>
-    <button id="submit">Submit</button>
-</div>
-</div>
+        <div class="offerDealsContainer">
+            <div class="offersAll">
+                <h2>Offers & Deals</h2>
+                <a href="/">
+                    <h3>View All Menu <span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="7" viewBox="0 0 19 7" fill="none" class="injected-svg" data-src="/static/media/ViewDetailsArrow.53c29b5a.svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path d="M0 3.46484H18" stroke="white"></path>
+                        <path d="M15.5352 1L18 3.46484L15.5352 5.92969" stroke="white"></path>
+                        </svg></span></h3>
+                  </a>
+            </div>
+
+            <div class="offerContainer">
+
+                <button id="btn"></button>
+                <div class="offerCars">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/CHKZINGER.jpg" alt="">
+                    <div class="offerdetails">
+                        <h4>1 Pc free Chicken Zinger on a cart value of 399 or above on first order. Only for registered users.</h4>
+
+                        <p>1 Pc free Chicken Zinger on a cart value of 399 or above on first order. Only for registered users.</p>
+                    </div>
+                    <div class="details">
+                        <a href="/">view Details</a>
+                        <a href="/">Reedem</a>
+                    </div>
+                </div>
+
+
+                <div class="offerCars">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/ADDCHK99.jpg" alt="">
+                    <div class="offerdetails">
+                        <h4>Add 2 Pc  Hot n Crispy Chicken @ just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd & 3rd order for signed in user.</h4>
+
+                        <p>Add 2 Pc  Hot n Crispy Chicken @ just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd & 3rd order for signed in user..</p>
+                    </div>
+                    <div class="details">
+                        <a href="/">view Details</a>
+                        <a href="/">Reedem</a>
+                    </div>
+                </div>
+
+                <div class="offerCars">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/ADDCHK99.jpg" alt="">
+                    <div class="offerdetails">
+                        <h4>Add 2 Pc  Hot n Crispy Chicken @ just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd & 3rd order for signed in user.</h4>
+
+                        <p>Add 2 Pc  Hot n Crispy Chicken @ just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd & 3rd order for signed in user.</p>
+                    </div>
+                    <div class="details">
+                        <a href="/">view Details</a>
+                        <a href="/">Reedem</a>
+                    </div>
+                </div>
+
+                <div class="offerCars">
+                    <img src="https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/offers/lg/CHKZINGER.jpg" alt="">
+                    <div class="offerdetails">
+                        <h4>1 Pc free Chicken Zinger on a cart value of 399 or above on first order. Only for registered users.</h4>
+
+                        <p>1 Pc free Chicken Zinger on a cart value of 399 or above on first order. Only for registered users.</p>
+                    </div>
+                    <div class="details">
+                        <a href="/">view Details</a>
+                        <a href="/">Reedem</a>
+                    </div>
+                </div>
+
+                <button id="btn2"></button>
+            </div>
+        </div>
+
+        <div class="nextFooter">
+            <div class="footerLogo">
+                <img src="https://images.ctfassets.net/wtodlh47qxpt/25FSYFuEtGct8NSrtpKe6d/b602f6fe0bf294e6a6dff5d7648bf594/KFC_Logo.svg" alt="">
+            </div>
+            <div class="kfcFoodMenu">
+                <ul>
+                    <li><a href="/">KFC FOOD</a></li>
+                    <li><a href="/Menu.html">Menu</a></li>
+                    <li><a href="/">Order Lookup</a></li>
+                    <li><a href="/gift.html">Gift Card</a></li>
+                </ul>
+            </div>
+            <div class="footerSupport">
+                <ul>
+                    <li><a href="/">support</a></li>
+                    <li><a href="/help.html">Get Help</a></li>
+                    <li><a href="/contactus.html">contact Us</a></li>
+                    <li><a href="/feedback.html">KFC Feedback</a></li>
+                    <li><a href="/Privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footerLegal">
+                <ul>
+                    <li><a href="/">Legal</a></li>
+                    <li><a href="/terms.html">Terms and condtions </a></li>
+                    <li><a href="/Privacy.html">Privacy Policy</a></li>
+                    <li><a href="/disclaimer.html">Disclaimer</a></li>
+                    <li><a href="/caution.html">Caution Notice</a></li>
+                </ul>
+            </div>
+
+            <div class="footerIndia">
+                <ul>
+                    <li><a href="/">KFC India</a></li>
+                    <li><a href="/about.html">About KFC </a></li>
+                    <li><a href="/care.html">KFC Care</a></li>
+                    <li><a href="/careers.html">Careers</a></li>
+                    <li><a href="/golden.html">Our Golden Past</a></li>
+                </ul>
+            </div>
+
+            <div class="footerfind">
+                <ul>
+                    <li><a href="/findkfc.html"><img src="https://images.ctfassets.net/wtodlh47qxpt/6qgKpWUOIsrIiazhk3cdmF/d60b4c20be69bab1f939bf33348b67e9/Find_KFC.svg" alt="">Find KFC</a></li>
+                </ul>
+            </div>
+            <div class="footerApps">
+               <a href="https://play.google.com/store/apps/details?id=com.yum.kfc"><img src="https://images.ctfassets.net/wtodlh47qxpt/6BdZsyjLn64c06uCIE73d1/fb530f5d5231533b049463f6c7e8a2b1/google_play.svg" alt=""></a>
+               <a href="https://apps.apple.com/in/app/kfc-india/id915824379"><img src="https://images.ctfassets.net/wtodlh47qxpt/em3mcMuAdXWlgucSJiTbS/d3ae7e51ed101d829e459355e255c47f/apple.svg" alt=""></a>
+            </div>          
+
+        </div>
+
+        <div class="copyright">
+            <p>Copyright © KFC Corporation 2022 All Rights Reserved</p>
+            <div class="copyrightLogo">
+                <img src="https://images.ctfassets.net/wtodlh47qxpt/4ZHyPA2EeaoP3aqtNDriBA/463462a9c27b0aa585e12b21ce3766e0/Social_Insta_White.svg" alt="">
+                <img src="https://images.ctfassets.net/wtodlh47qxpt/dKiu2meLcfz2DNwsg7nZw/7194830b1ba6f25b158a23d6b2c4752c/Social_Facebook_White.svg" alt="">
+                <img src="https://images.ctfassets.net/wtodlh47qxpt/78z9x0WwdkdXwGVK726EKX/6599ca34ec88e2a6f46d7d94ed85a8ad/Social_Twitter_White.svg" alt="">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
-<script src="index.js"></script>
+<script src="js/home.js"></script>
