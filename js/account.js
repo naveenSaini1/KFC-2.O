@@ -1,4 +1,5 @@
 let userDataArr2 = JSON.parse(localStorage.getItem("userData"));
+let NooOrders = JSON.parse(localStorage.getItem("orders"))
 let num = localStorage.getItem('num');
 
 let flag2 = JSON.parse(localStorage.getItem("flag_value"));
@@ -55,10 +56,19 @@ function orderHistory() {
     user_noOrder.setAttribute("id", "user_section_NoOrder");
 
     let user_noOrderSpan = document.createElement("span");
-    user_noOrderSpan.innerText = "No orders have been placed in the past 12 months.";
+    if(NooOrders < 1){
+        user_noOrderSpan.innerText = "No orders have been placed in the past 2 months.";
+    }
+    else{
+        user_noOrderSpan.innerText = `You Have Orderd ${NooOrders} Meals in last few days.`;
+    }
+    
 
     let user_noOrderbtn = document.createElement("button")
     user_noOrderbtn.innerText = "View menu";
+    user_noOrderbtn.addEventListener("click",function(){
+        window.location.href = "Menu.html"
+    })
     user_noOrder.append(user_noOrderSpan, user_noOrderbtn)
 
     let hr = document.createElement("hr")
@@ -83,6 +93,9 @@ function orderHistory() {
     let user_helpSectionbtn_Help = document.createElement("button");
     user_helpSectionbtn_Help.setAttribute("id", "user_section_helpBtn");
     user_helpSectionbtn_Help.innerText = "Get Help";
+    user_helpSectionbtn_Help.addEventListener("click",function(){
+        window.location.href = "help.html"
+    })
 
     user_section_help.append(user_helpSectionText, user_helpSectionbtn_Help);
     user_helpSection_box.append(user_section_help);
@@ -110,6 +123,9 @@ function favoriteMenu() {
     let favoriteMenu_history = document.createElement("button")
     favoriteMenu_history.setAttribute("class", "favoriteMenu_history")
     favoriteMenu_history.innerText = "View Order History";
+    favoriteMenu_history.addEventListener("click",function(){
+        window.location.href = "account.html"
+    })
 
     let favoriteMenu_heading1 = document.createElement("span");
     favoriteMenu_heading1.setAttribute("class", "favoriteMenu_heading")
@@ -122,6 +138,9 @@ function favoriteMenu() {
     let favoriteMenu_history1 = document.createElement("button")
     favoriteMenu_history1.setAttribute("class", "favoriteMenu_history")
     favoriteMenu_history1.innerText = "Browse the menu";
+    favoriteMenu_history1.addEventListener("click",function(){
+        window.location.href = "Menu.html"
+    })
 
     favoriteMenu.append(favoriteMenu_heading, favoriteMenu_Data, favoriteMenu_history, favoriteMenu_heading1, favoriteMenu_Data1, favoriteMenu_history1);
     document.querySelector("#user_section_right").append(favoriteMenu)
@@ -401,6 +420,12 @@ function SaveData() {
     localStorage.setItem("userData", JSON.stringify(userDataArr2));
 }
 
+if(NooOrders < 1){
+    document.querySelector("#Noorders").innerText = "No orders have been placed in the past 2 months.";
+}
+else{
+    document.querySelector("#Noorders").innerText = `You Have Ordered ${NooOrders} Meals in last few days.`;
+}
 function CancelForm() {
     window.location.reload();
 }
