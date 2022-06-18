@@ -6,40 +6,59 @@
     box-sizing: border-box;
     font-family:Open Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
+
+a{
+    text-decoration: none;
+}
+header{
+    position:sticky;
+    top: 0;
+    z-index: 1;
+}
 header nav .nav{
     width: 100%;
-    border: 2px solid green;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 19px 84px;
+    background-color: #fff;
+    
 }
 .nav .right-nav{
     display: flex;
-    width: 202px;
+    width: 230px;
     justify-content: space-around;
 }
 .nav .right-nav ul{
     display: flex;
     width: 100px;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    font-weight: 500;
+    
 }
+
+.nav .right-nav ul li a{
+    color: #202124;
+}
+
 .nav .right-nav ul li {
     list-style: none;
 }
+
 .nav .left-nav{
     display: flex;
     align-items: center;
-    width: 167px;
-    justify-content: space-between;
+    width: 170px;
+    justify-content: space-around;
+    font-weight: 500;
 
 }
 .user-logo{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 68px;
+    width: 120px;
 }
 .left-nav .cart-bucket{
     display: flex;
@@ -53,7 +72,7 @@ header nav .nav{
     margin-left: 5px;
 }
 .startOrder{
-    background-color: black;
+    background-color: #202124;
     padding:20px;
 }
 .startOrder .childOrder{
@@ -66,13 +85,13 @@ header nav .nav{
     display: inline-block;
     margin-right: 10px;
     font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 .childOrder button{
     display: inline-block;
     border: 1.5px solid #e4002b;
     line-height: 24px;
     font-size: 14px;
-    margin-top: 4px;
     font-weight: 500;
     padding: 4px 30px;
     border-radius: 24px;
@@ -381,11 +400,19 @@ footer{
 }
 
 .user-logo img{
-    padding: 8px 5px 0px 0px;
+    padding: 7px 15px 0px 0px;
 }
 .user-logo a{
     text-decoration: none;
-    /* padding-right: 10px; */
+    color: #202124;
+    cursor: pointer;
+}
+
+#Border_left{
+    width: 20px;
+    height: 25px;
+    border-right: 1px solid #ebebeb;
+    margin-right: 10px;
 }
 @media screen and (max-width:720px) {
     section .catSection {
