@@ -31,7 +31,7 @@ header nav .nav{
 .nav .left-nav{
     display: flex;
     align-items: center;
-    width: 158px;
+    width: 167px;
     justify-content: space-between;
 
 }
@@ -376,23 +376,51 @@ footer{
     color: gray;
 }
 
+.footerApps{
+    margin-top: 20px;
+}
+
+.user-logo img{
+    padding: 8px 5px 0px 0px;
+}
+.user-logo a{
+    text-decoration: none;
+    /* padding-right: 10px; */
+}
 @media screen and (max-width:720px) {
     section .catSection {
         width: 70%;
         padding: 10px 13px;
-    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
-
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
-    .upper h3{
+    .upper h3 {
         font-size: 15px;
     }
-    
-.catSection .upper {
-    display: block;
-}
+    .catSection .upper {
+        display: block;
+    }
 }
 @media screen and (max-width:560px) {
-    header nav .nav{
+    section .catSection {
+        width: 70%;
+        padding: 10px 13px;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        margin: auto;
+    }
+    header nav .nav {
         padding: 0px;
+    }
+    .footerApps>a{
+        margin-top: 15px;
+        display: block;
+    }
+    .copyright{
+        margin: auto;
+        display: block;
+        margin-top: 10px;
+    }
+    .copyright>div{
+        margin-top: 10px;
+        text-align: right;
     }
 }
