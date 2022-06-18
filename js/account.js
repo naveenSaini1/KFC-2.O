@@ -44,6 +44,9 @@ function orderHistory() {
 
     let orderHistory_orderlookupbtn = document.createElement("button")
     orderHistory_orderlookupbtn.innerText = "Order Lookup";
+    orderHistory_orderlookupbtn.addEventListener("click", function () {
+        document.querySelector(".popup1").style.display = "block"
+    });
 
     orderHistory_orderlookup.append(orderHistory_orderSpan, orderHistory_orderlookupbtn)
     orderHistory.append(orderHistory_order, orderHistory_orderlookup)
@@ -401,5 +404,12 @@ function SaveData() {
 function CancelForm() {
     window.location.reload();
 }
+document.querySelector("#userOrder").addEventListener('click', function () {
+    document.querySelector(".popup1").style.display = "block"
+})
+
+document.querySelector(".close_button").addEventListener('click', function () {
+    document.querySelector(".popup1").style.display = "none"
+})
 
 NameChange();
