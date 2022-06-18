@@ -28,7 +28,10 @@
     width: 100%;
     display: grid;
     margin-bottom: 70px;
-    grid-template-columns: repeat(2, 383px);
+    /* grid-template-columns: repeat(2, 383px);
+     */
+     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+     gap: 30px;
     grid-template-rows: repeat(auto);
     justify-content: space-evenly;
     /* height: 800px;
@@ -139,7 +142,9 @@
     width: 100%;
     display: grid;
     margin-bottom: 70px;
-    grid-template-columns: repeat(3, 275px);
+    /* grid-template-columns: repeat(3, 275px); */
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
     grid-template-rows: repeat(auto);
     justify-content: space-between;
 }
@@ -217,8 +222,10 @@
     width: 100%;
     display: grid;
     margin-bottom: 30px;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(auto);
+    /* grid-template-columns: repeat(3, 270px); */
+    /* grid-template-rows: repeat(auto); */
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
     justify-content: space-around;
 }
 
@@ -227,9 +234,11 @@
     width: 100%;
     display: grid;
     margin-bottom: 30px;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(auto);
+    /* grid-template-columns: repeat(3, 270px);
+    grid-template-rows: repeat(auto); */
     justify-content: space-around;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
 }
 
 #boxMeal {
@@ -237,8 +246,10 @@
     width: 100%;
     display: grid;
     margin-bottom: 30px;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(auto);
+    /* grid-template-columns: repeat(3, 270px); */
+    /* grid-template-rows: repeat(auto); */
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
     justify-content: space-around;
 }
 
@@ -247,9 +258,11 @@
     width: 100%;
     display: grid;
     margin-bottom: 30px;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(auto);
+    /* grid-template-columns: repeat(3, 270px);
+    grid-template-rows: repeat(auto); */
     justify-content: space-around;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
 }
 
 #HomeSpecial {
@@ -257,9 +270,11 @@
     width: 100%;
     display: grid;
     margin-bottom: 30px;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(auto);
+    /* grid-template-columns: repeat(3, 270px);
+    grid-template-rows: repeat(auto); */
     justify-content: space-around;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
 }
 
 #Snacks {
@@ -267,9 +282,11 @@
     width: 100%;
     display: grid;
     margin-bottom: 30px;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(auto);
+    /* grid-template-columns: repeat(3, 270px);
+    grid-template-rows: repeat(auto); */
     justify-content: space-around;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
 }
 
 #Beverages {
@@ -277,9 +294,11 @@
     width: 100%;
     display: grid;
     margin-bottom: 70px;
-    grid-template-columns: repeat(3, 270px);
-    grid-template-rows: repeat(auto);
+    /* grid-template-columns: repeat(3, 270px);
+    grid-template-rows: repeat(auto); */
     justify-content: space-around;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:30px;
 }
 
 #items>div:last-child {
