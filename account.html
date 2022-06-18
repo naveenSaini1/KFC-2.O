@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/account.css">
+    <title>Account</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav">
+                <div class="right-nav">
+                    <a href="/"><img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt="logo"></a>
+                    <ul>
+                        <li>Menu</li>
+                        <li>Deals</li>
+                    </ul>
+                </div>
+                <div class="left-nav">
+                    <div class="user-logo">
+                        <a href="/"><img
+                                src="https://images.ctfassets.net/wtodlh47qxpt/6bJdGLRkksNvWP4LI9ZiFF/cb89d6393492fd093e0f99980abfa39e/Account_Icon.svg"
+                                alt=""></a>
+                        <span>Account</span>
+                    </div>
+                    |
+                    <div class="cart-bucket">
+
+                        <span>$</span>
+                        <span>0</span>
+                        <div class="img"><a href="/"><img
+                                    src="https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- start Order part -->
+        <div class="startOrder">
+            <div class="childOrder">
+                <h3>LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</h3>
+                <button>Start Over</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="user_section">
+        <div id="user_section_left">
+            <img src="https://online.kfc.co.in/static/media/Strips.4f336307.svg" alt="">
+            <h4>HELLO KFC LOVER!</h4>
+            <div id="user_menu_container">
+                <div onclick="orderHistory()" id="order_History" class="user_account_menu">Order History</div>
+                <div onclick="favoriteMenu()" id="favorite_Menu" class="user_account_menu">My Favorite Menu</div>
+                <div onclick="addresses()" id="addresses" class="user_account_menu">Addresses</div>
+                <div onclick="accountSettings(event)" id="account_Settings" class="user_account_menu">Account Settings
+                </div>
+            </div>
+            <button id="user_signout">Sign Out</button>
+        </div>
+
+        <div id="user_section_right">
+            <div id="user_section_header">
+                <div id="user_section_order">Order History</div>
+
+                <div id="user_section_orderlookup">
+                    <span>Looking for a specific order?</span>
+                    <button>Order Lookup</button>
+                </div>
+            </div>
+
+            <div id="user_section_NoOrder">
+                <span>No orders have been placed in the past 12 months.</span>
+                <button>View menu</button>
+            </div>
+
+            <hr>
+            <div id="user_section_help_container">
+                <div id="user_section_help">
+                    <div id="user_section_helpText">
+                        <span>HAVE A QUESTION?</span>
+                        <span>Connect with a specialist for answers.</span>
+                    </div>
+                    <button id="user_section_helpBtn">Get Help</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/account.js"></script>
