@@ -14,8 +14,8 @@
 
 #items {
     /* border: 1px solid blue; */
-    width: 74.3%;
-    height: 600px;
+    width: 75%;
+    height: 100vh;
     overflow-y: scroll;
 }
 

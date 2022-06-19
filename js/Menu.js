@@ -1316,4 +1316,16 @@ function totalPrice(){
     })
     document.getElementById('pricess').innerText=allPrice.length;
 }
+let allData=document.querySelectorAll('.btn')
+allData.forEach((e,i)=>{
+    e.addEventListener('click',function(event){
+        allData.forEach(x=>{
+            x.style.backgroundColor='white'
+            x.style.color='black'
+        })
+        event.target.style.color='red'
+
+    })
+})
+
 totalPrice()
