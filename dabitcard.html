@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add cart Page </title>
+  <style>
+    *{
+      margin:0%;
+      padding: 0%;
+      box-sizing: border-box;
+    }
+    
+   
+  
+    button{
+      font-size: 20px;
+    padding: 1px 11px;
+    cursor: pointer;
+    }
+    span{
+      display: inline-block;
+    margin: 0px 10px;
+    font-size: 25px;
+    }
+  
+      .paymentDetails{
+        box-shadow: 10px 10px 5px gray;
+        width: 40%;
+        margin:auto;
+        margin-top: 18px;
+        background-color: #f8f7f5;
+      }
+      .paymentDetails input{
+        display: block;
+        margin: 16px 0px;
+        width: 100%;
+      }
+      .inputDetails{
+        margin-top: 10px;
+       
+      }
+      .dateInput{
+        display: flex;
+        margin-top: 10px;
+        /* border: 2px solid green; */
+        justify-content: space-between;
+        width: 45%;
+        align-items: center;
+      }
+      .inputDetails > input{
+        padding: 6px 5px;
+      }
+      .dateInput input:first-child{
+        font-size: 23px;
+      }
+      .dateInput input:last-child{
+        width: 75px;
+        padding: 10px 3px;
+        font-size: 20px;
+      }
+      .paymentDetails button{
+        margin: 20px 0px;
+        margin-bottom: 50px;
+        background-color: orange;
+        color: black;
+        font-family: monospace;
+        text-transform: capitalize;
+        
+        border:none;
+      }
+      .paymentDetails h4{
+        font-size: 20px;
+        
+      }
+      .paymentDetails h4 span{
+        color: green;
+        display: inline-block;
+        /* margin-left: 4px; */
+      }
+     
+  </style>
+</head>
+<body>
+
+<div class="paymentDetails">
+  <h4>Payment Method Using <span>Credit / Debit / ATM Card</span></h4>
+  <div class="inputDetails">
+    <input type="text" name="name" id="name" placeholder="Enter your Name" required>
+    <input type="number" name="name" id="number" placeholder="Enter your Card Number" required>
+
+    <div class="dateInput"> 
+      <input type="month" name="month" id="month" placeholder="MM/YYYY" required>
+      <input type="number" name="cvv" id="cvv" placeholder="CVV" required>
+      
+    </div>
+    <button id="payment">Pay<span  id="span"></span></button>
+  </div>
+</div>
+
+  <script>
+    let cart=JSON.parse(localStorage.getItem('cart')) || [];
+ // payment gatway let totalValue=JSON.parse(localStorage.getItem("totalValue")) || [];
+document.querySelector("#span").innerText=totalValue.toFixed(2);
+document.getElementById('payment').addEventListener('click',function(){
+  let cardNumber='123456789';
+  let date='2022-12';
+  let cvv='123';
+  let inputDate=document.getElementById('month').value;
+  let inputCard=document.getElementById('number').value;
+  let inputCvv=document.getElementById('cvv').value;
+  if(inputCard==cardNumber && inputDate==date && cvv==inputCvv){
+    window.location.href='otpDabitcard.html';
+  }
+  else{
+    alert('Wrong Details')
+  }
+  console.log(inputDate)
+})
+  
+</script>
+</body>
+</html>

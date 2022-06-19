@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .main{
+            width: 400px;
+            box-shadow: 10px 10px 5px gray;
+            margin: auto;
+            text-align: center;
+            padding: 10px 5px;
+            background-color: #f8f7f5;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div>
+        <h1>OTP</h1>
+    </div>
+    <p>Please Wait you Otp is Genrating...</p>
+    <p id="otp"></p>
+    <div id="input">
+    
+    </div>
+</div>
+
+<script>
+    let count=1;
+ let myInterval=  setInterval(function(){
+    count++;
+    document.getElementById('otp').innerText=count;
+    if(count==4){
+        myStopFunction();
+    }
+   }, 1000)
+
+function myStopFunction() {
+  clearInterval(myInterval);
+  submitData();
+}
+function submitData(){
+    let inputData=document.getElementById('input');
+    let dir=`<input type="text" id='myotp'>
+    <input type="submit" value="Submit Your Otp" id='suc'>`
+    inputData.innerHTML=dir;
+    last();
+}
+function last(){
+document.getElementById('suc').addEventListener('click',function(){
+   let ottp= document.getElementById('myotp').value;
+   if(ottp=='1234'){
+        let conf=confirm('Paymet Succesfully Do you Want to go home page')
+    if(conf){
+        window.location.href='index.html';
+    }
+    else{
+        window.location.href='cart.html'
+    }
+   
+   }
+   else{
+    window.location.href='signup.html'
+   }
+})
+}
+</script>
+</body>
+</html>
