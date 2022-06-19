@@ -155,13 +155,14 @@ ChickenBucket(itemsArr)
             add.setAttribute("class","AddButton")
 
             add.addEventListener("click", function(){
-                totalPrice();
+               
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
                 }else{
                     alert("This item is already added")
                 }
+                totalPrice();
             })
             
             let innerBox = document.createElement("div");
@@ -302,13 +303,14 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+               
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
                 }else{
                     alert("This item is already added")
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -422,13 +424,14 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+             
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
                 }else{
                     alert("This item is already added")
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -559,13 +562,14 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+                // totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
                 }else{
                     alert("This item is already added")
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -660,13 +664,14 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+               
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
                 }else{
                     alert("This item is already added")
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -788,13 +793,14 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+               
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
                 }else{
                     alert("This item is already added")
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -906,13 +912,16 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+                
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
+                    // window.location.reload()
                 }else{
                     alert("This item is already added")
+                    // window.location.reload()
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -1178,13 +1187,16 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+                
                 if(check(elem.Name)===false){
                     addToCart(elem)
+                    // window.location.reload()
                     alert("Item added")
                 }else{
                     alert("This item is already added")
+                    // window.location.reload()
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -1271,13 +1283,16 @@ ChickenBucket(itemsArr)
 
 
             add.addEventListener("click", function(){
-                totalPrice();
+                // totalPrice();
                 if(check(elem.Name)===false){
                     addToCart(elem)
                     alert("Item added")
+                    // window.location.reload()
                 }else{
                     alert("This item is already added")
+                    // window.location.reload()
                 }
+                totalPrice();
             })
             let innerBox = document.createElement("div");
             innerBox.append(name,varity,price,offer)
@@ -1291,7 +1306,7 @@ ChickenBucket(itemsArr)
 
     function addToCart(elem){
         addCartArr.push(elem);
-        console.log("Hi")
+        // console.log("Hi")
         localStorage.setItem("CartData", JSON.stringify(addCartArr))
     }
 
@@ -1306,16 +1321,20 @@ ChickenBucket(itemsArr)
         }
     }
 let valueofPrice=0;
-let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
+
+
 function totalPrice(){
+    let allPrice=JSON.parse(localStorage.getItem("CartData")) || [];
     
-    console.log('hello')
-    allPrice.forEach(e=>{
-        console.log(e.Price)
-        valueofPrice+=Number(e.Price);
-    })
+    // console.log('hello')
+    // allPrice.forEach(e=>{
+    //     console.log(e.Price)
+    //     valueofPrice+=Number(e.Price);
+    // })
     document.getElementById('pricess').innerText=allPrice.length;
+    // window.location.reload();
 }
+totalPrice();
 let allData=document.querySelectorAll('.btn')
 allData.forEach((e,i)=>{
     e.addEventListener('click',function(event){
