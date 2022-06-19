@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +11,7 @@
             font-family: Open Sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
         }
 
-        body{
+        body {
             width: 80%;
             height: 500px;
             display: flex;
@@ -22,11 +21,11 @@
         }
 
         #container {
-            width: 25%;
+            width: 30%;
             margin: auto;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             border-radius: 5px;
-            
+
         }
 
         h1 {
@@ -60,6 +59,26 @@
             color: white;
             margin-bottom: 30px;
         }
+
+        @media only screen and (min-width: 500px) and (max-width: 800px) {
+            #container {
+                width: 60%;
+                margin: auto;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                border-radius: 5px;
+
+            }
+        }
+
+        @media only screen and (min-width: 320px) and (max-width: 499px) {
+            #container {
+                width: 90%;
+                margin: auto;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                border-radius: 5px;
+
+            }
+        }
     </style>
 </head>
 
@@ -75,17 +94,17 @@
 </body>
 
 </html>
- <script> 
- let monthData = JSON.parse(localStorage.getItem("CartData"));
+<script>
+    let monthData = JSON.parse(localStorage.getItem("CartData"));
     document.querySelector("form").addEventListener("submit", storevalue)
 
     function storevalue() {
         event.preventDefault();
         let OTP = document.querySelector("#otp").value;
-        if (OTP != "" ) {
+        if (OTP != "") {
             if (OTP === "1234") {
                 let NoofOrders = monthData.length;
-                localStorage.setItem("orders",JSON.stringify(NoofOrders));
+                localStorage.setItem("orders", JSON.stringify(NoofOrders));
                 alert("Payment Succesfull")
                 window.location.href = "index.html";
             }
@@ -94,9 +113,9 @@
             }
 
         }
-        else{
+        else {
             alert("Please Enter OTP")
         }
 
     }
-</script> 
+</script>

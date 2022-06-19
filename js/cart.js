@@ -34,7 +34,7 @@ function display(obj) {
         let span = document.createElement('span');
         span.innerText = element.Varity;
         let span2 = document.createElement('span');
-        span2.innerText = 'cart remove';
+        span2.innerText = 'Remove item';
         span2.addEventListener("click", function () {
             removeCartData(element, index)
         })
