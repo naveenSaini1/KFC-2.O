@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 100%;
+           
+            margin: auto;
+        }
+        #locate{
+            height: 80px;
+            background-color: black;
+            color: white;
+        }
+        #page2{
+           
+            
+            width: 100%;
+            margin: auto;
+            
+        }
+        #page2>img{
+            margin-left: 10%;
+        }
+        #page2>h1{
+            margin-left: 8%;
+        }
+        #data{
+            width: 100%;
+            
+            display: grid;
+           grid-template:auto/repeat(1,auto) ;
+           /* justify-content: center; */
+           gap: 10px;
+
+        }
+        /* ********************* */
+        #data>div{
+            background-color: #f8f7f5;
+           display: flex;
+           margin: auto;
+           justify-content: space-evenly;
+           width: 100%;
+           padding: 10px;
+           height: 130px;
+        }
+       #data>div>img{
+        width: 30%;
+        height: 100%;
+        border-radius: 10px;
+       }
+      #maindata{
+        display: grid;
+            grid-template: auto/repeat(2,auto);
+            justify-content: space-around;
+            
+        width: 100%;
+        
+      }
+      #pay{
+            width: 100%;
+            background-color: #f8f7f5;
+            margin: auto;
+            box-shadow: 5px 5px 5px 5px #dfdedb;
+            margin-top: 20px;
+        }
+        #pay>div{
+            
+            width: 80%;
+            margin-left: 20px;
+            padding: 20px;
+           
+        }
+        #pay>div>div:last-child{
+            border: 1px solid teal;
+            
+            padding: 20px;
+            
+        }
+        #pay>div>button{
+            
+            width: 100%;
+            padding: 10px;
+           
+        }
+        #pay>div>div>h3{
+            display: inline-block;
+           
+        }
+        #pay>div>div>h3+h4{
+            margin-top: 5px;
+           
+        }
+        #pay>div>input+h3{
+            display: inline-block;
+           
+        }
+        #checkout{
+            display: flex;
+            border-radius: 40%;
+            justify-content: space-around;
+            color: green;
+            margin: 0px;
+           
+        }
+        #itm{
+            color: green;
+        }
+        #gst{
+            color: green;
+        }
+        #itm2{
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            
+        }
+        #subtot{
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        #gstdiv{
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            align-items: center;
+            
+        }
+        #subtotal{
+            color: green;
+        }
+        #incrementbtn{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 10px;
+            margin-left: 20px;
+            
+        }
+        #decrementbtn{
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            padding: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        #delete{
+            color: red;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+      
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="page1"></div>
+        <div id="page2">
+           <!-- start--- cart item and price will show here -->
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAeCAYAAAB5c901
+            AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABNSURBVH
+            gB7c9BDQAgAMPAgQ4c4F8KDvABFuBHSe+9LGmZ6SsXWkY52b3yW/M5A+kMpDOQzkA6A+kMpDOQzkA6A+kMpDO
+            QzkA6A+kMpNu9MQhKmC+cDgAAAABJRU5ErkJggg==" alt="">
+            <h1>MY CART</h1>
+            <div id="maindata">
+                <div id="data">
+                <!-- cartitem will show here -->
+
+                </div>
+                <div id="pay">
+                    <!-- PAYMENT AND COUNT ITEM WILL SHOW HERE -->
+                    <div>
+                       <div id="itm2"><h1 id="itm"></h1><h1>ITEMS</h1></div>
+                       <input type="checkbox" onclick="offer()"><h3>Apply To Get 30% Off</h3>
+                           
+                        <div id="subtot"><h3>SUBTOTAL:</h3><h2 id="subtotal"></h2></div>
+                        <div id="gstdiv"><h2>GST:</h2><h3 id="gst"></h3></div>
+                        <hr>
+                        <input type="checkbox" onclick="bag()"><h3>₹:6 To add a large carry bag</h3>
+                        <hr>
+                        <div>
+                            <input type="checkbox" onclick="donate()"><h3>Donate ₹:5 to ADDHOPE</h3>
+                                  <h4>Our Goal is to add 20 million people in 2022</h4>
+                        </div>
+                        <button id="checkout">CHECKOUT <span id="checkoutvalue"></span> </button>
+                    </div>
+                </div>
+            </div>
+            <!-- END--- cart item and price will show here -->
+        </div>
+        <div id="ad-ons">
+            <h1>INDULZENT ADD-ONS</h1>
+          
+        </div>
+        <div id="faq">
+           
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    let obj=[
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                {
+                    image:" https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-8000110.jpg?ver=16.58",
+                    name: "snack pack combo",
+                    rs: "348.57",
+                   
+                },
+                   
+                            
+    ]
+    let arr1=JSON.parse(localStorage.getItem("data")) || [];
+    let total=0; 
+    let count=0;
+    let totalValue=0
+    function check(arr1){
+        
+         
+    arr1.map(function (element,i){
+        let quantity=1;
+        total+=+element.rs;
+            count++;
+    let div1= document.createElement("div");
+    let img=document.createElement("img");
+    img.setAttribute("src",element.image);
+    let h2= document.createElement("h2");
+    h2.innerText=element.name;
+    let h4=document.createElement("h4");
+    h4.innerText="Remove";
+    h4.setAttribute("id","delete");
+    h4.addEventListener("click",function(){
+        remove(element,i);
+    })
+    let btn1= document.createElement("button");
+    btn1.setAttribute("id","decrementbtn");
+    btn1.innerText="-";
+    btn1.addEventListener("click",function(){
+        if(quantity>1){
+            quantity--;
+        h1.innerText=quantity;
+        hh.innerText= (element.rs)*quantity;
+        total=(total-element.rs);
+        subtotal.innerText= total.toFixed(2);
+        gst.innerText= ((total*10)/100).toFixed(2);
+        totalValue=(total+((total*10)/100));
+        document.querySelector("#checkoutvalue").innerText=totalValue.toFixed(2);
+        count--;
+        itm.innerHTML=count;
+        localStorage.setItem("totalValue",totalValue);
+        }
+       
+       
+    })
+    let h1= document.createElement("h2");
+    h1.innerText=quantity;
+    let btn2= document.createElement("button");
+    btn2.setAttribute("id","incrementbtn")
+    btn2.innerText="+";
+    btn2.addEventListener("click",function(){
+        let previousQuantity=quantity;
+        quantity++;
+       h1.innerText=quantity;
+       hh.innerText= ((element.rs)*quantity);
+       total+=(((element.rs)*quantity)-element.rs*previousQuantity);
+       subtotal.innerText= total.toFixed(2);
+       gst.innerText= ((total*10)/100).toFixed(2);
+       totalValue=(total+((total*10)/100));
+       document.querySelector("#checkoutvalue").innerText=totalValue.toFixed(2);
+       count++;
+       itm.innerHTML=count;
+       localStorage.setItem("totalValue",totalValue);
+       
+    })
+    
+    let hh= document.createElement("h2");
+    hh.innerText= (element.rs)*quantity;
+    div1.append(img,h2,btn1,h1,btn2,hh,h4);
+    document.querySelector("#data").append(div1);
+    // payment code-----------------
+           
+          
+            let itm= document.querySelector("#itm");
+            itm.innerHTML=count;
+            let subtotal= document.querySelector("#subtotal");
+            subtotal.innerText= total.toFixed(2);
+            let gst= document.querySelector("#gst");
+            gst.innerText= ((total*10)/100).toFixed(2);
+            totalValue=(total+((total*10)/100));
+            let btn= document.querySelector("#checkout");
+            document.querySelector("#checkoutvalue").innerText=totalValue.toFixed(2);
+            //btn.innerText= totalValue.toFixed(2);
+            btn.addEventListener("click",function(){
+                window.location.href="dabitcard.html";
+
+
+
+            })
+           localStorage.setItem("totalValue",totalValue);
+            
+    });
+}
+   check(arr1);
+ 
+
+    function bag(click){
+        totalValue+= 6;
+        document.querySelector("#checkoutvalue").innerText=totalValue.toFixed(2);
+    }
+    function donate(){
+            totalValue+= 5;
+            document.querySelector("#checkoutvalue").innerText=totalValue.toFixed(2);
+   
+    }
+    function offer(){
+        totalValue=((total*70)/100);
+        document.querySelector("#checkoutvalue").innerText=totalValue.toFixed(2);
+    }
+
+    function remove(element,i){
+        arr1.splice(i,1);
+        localStorage.setItem('data',JSON.stringify(arr1));
+        window.location.reload();
+    }
+
+</script>
