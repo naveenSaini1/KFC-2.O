@@ -2,7 +2,7 @@
 #### This is my collaborative project 
 
 ##### About Project
-<p>Inspired by KFC is an American fast food restaurant, Kentucky, that specializes in fried chicken, Created a clone of it with the functionalities of the original One  we were 5 Members in this project </p>
+<p>Inspired by KFC is an American fast food restaurant, Kentucky, that specializes in fried chicken, Created a clone of it with the functionalities of the original One .  we were 5 Members in this project </p>
 Tech-Stack: Html css Javascript 
 </br>
 
